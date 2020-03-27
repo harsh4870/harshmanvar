@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Harsh Manvar - Portfolio</title>
+</head>
+<body>
+    <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v6.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your customer chat code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="101466711511020"
+  logged_in_greeting="Hey, This is Harsh Manvar, How may i help you?"
+  logged_out_greeting="Thankyou..!">
+      </div>
+    <div class="grid-2">
+        <div class="section-1">
+            <i class="fas fa-code fa-5x white"></i>
+            <h2>Harsh Manvar</h2>
+            <p>Ahmedabad,India.</p>
+            <script type="text/javascript">$(function(){
+
+  $('#tags input').on('focusout', function(){    
+    var txt= this.value.replace(/[^a-zA-Z0-9\+\-\.\#]/g,''); // allowed characters list
+    if(txt) $(this).before('<span class="tag">'+ txt +'</span>');
+    this.value="";
+    this.focus();
+  }).on('keyup',function( e ){
+    // comma|enter (add more keyCodes delimited with | pipe)
+    if(/(188|13)/.test(e.which)) $(this).focusout();
+  });
+
+  $('#tags').on('click','.tag',function(){
+     if( confirm("Why buddy, you want to delete it?") ); 
+  });
+
+});</script>
+            <a href="https://twitter.com/manvar_harsh"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/harsh4870"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/harshmanvarofficials"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/harsh-manvar-64a30aa3/"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="section-2">
+            <h2>About</h2>
+            <p>i am DevOps Engineer. Having over 2 years of experience as managing infrastructure (GCP, Linux, Windows), DevOps (Build & Release Management).</p>
+            <h2>Skills</h2>
+            <!-- <p>During my job experience, I had practical skills with interesting technologies, tasks, people. In the whole role of my engineering practice include building and supporting web SaaS solutions based on Linux/Unix platform in a cloud (AWS, GCP), experience on server infrastructure migration, Kubernetes, Docker, monitoring and securing, and Linux Server setup/administration. Takes the form part in automating, supporting and to ensure CI/CD in product developing.</p> -->
+            <p><div id="tags">
+  <span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">GCP</span>
+  <span class="tag">GCP</span><span class="tag">Redis</span><span class="tag">Elasticsearch</span>
+
+  <span class="tag">Kafka</span><span class="tag">Fluentbit</span><span class="tag">Graylog</span>
+  <span class="tag">MYSQL</span><span class="tag">MongoDB</span><span class="tag">Postgres</span>
+  <span class="tag">Ansible</span><span class="tag">Terraform</span><span class="tag">Chef</span>
+  <span class="tag">Sonarqube</span><span class="tag">Superset</span><span class="tag">Doccano</span>
+</div> </p>
+            <!-- <h2>Projects</h2>
+            <a href="#">Project 1</a>
+            <a href="#">Project 2</a>
+            <a href="#">Project 3</a>
+            <a href="#">Project 4</a>
+            <a href="#">Project 5</a> -->
+            <h2>Contact</h2>
+            <p>harsh.manvar111@gmail.com</p>
+        </div>
+
+    </div>
+</body>
+</html>
